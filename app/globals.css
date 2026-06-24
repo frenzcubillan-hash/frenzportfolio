@@ -1,0 +1,390 @@
+:root {
+  --bg: #0b1120;
+  --bg-soft: #111a30;
+  --card: rgba(17, 26, 48, 0.82);
+  --card-border: rgba(255, 255, 255, 0.08);
+  --text: #e5eefc;
+  --muted: #a9b7d0;
+  --accent: #7c9cff;
+  --accent-2: #57d6c4;
+  --shadow: 0 18px 50px rgba(0, 0, 0, 0.28);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: Inter, Arial, sans-serif;
+  background:
+    radial-gradient(circle at top, rgba(124, 156, 255, 0.16), transparent 32%),
+    radial-gradient(circle at bottom right, rgba(87, 214, 196, 0.12), transparent 25%),
+    var(--bg);
+  color: var(--text);
+  min-height: 100vh;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.page {
+  width: min(1100px, calc(100% - 32px));
+  margin: 0 auto;
+  padding: 40px 0 80px;
+}
+
+.section {
+  margin-bottom: 24px;
+}
+
+.section-spaced {
+  margin-bottom: 72px;
+}
+
+.hero-card,
+.project-card,
+.experience-card,
+.contact-card,
+.resume-card,
+.contact-photo-card {
+  background: var(--card);
+  border: 1px solid var(--card-border);
+  border-radius: 24px;
+  box-shadow: var(--shadow);
+  backdrop-filter: blur(16px);
+}
+
+.hero-card {
+  padding: 40px;
+}
+
+.hero-layout {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 24px;
+  align-items: stretch;
+}
+
+.hero-copy {
+  min-width: 0;
+}
+
+.eyebrow {
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  font-size: 0.78rem;
+  color: var(--accent-2);
+  margin-bottom: 14px;
+}
+
+.hero h1 {
+  font-size: clamp(2.2rem, 5vw, 4.5rem);
+  line-height: 1.05;
+  margin-bottom: 18px;
+  max-width: 900px;
+}
+
+.hero h1 span {
+  color: var(--accent);
+}
+
+.lead {
+  font-size: 1.08rem;
+  line-height: 1.8;
+  color: var(--muted);
+  max-width: 760px;
+}
+
+.hero-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+  margin-top: 28px;
+}
+
+.hero-box,
+.project-card,
+.experience-card,
+.contact-card,
+.resume-card,
+.contact-photo-card {
+  padding: 24px;
+}
+
+.hero-box h3,
+.section-title h2,
+.project-card h3,
+.experience-card h3,
+.resume-card h3 {
+  margin-bottom: 10px;
+}
+
+.hero-box p,
+.project-card p,
+.experience-card li,
+.contact-card p,
+.resume-card p {
+  color: var(--muted);
+  line-height: 1.7;
+}
+
+.resume-card {
+  margin-top: 18px;
+  display: flex;
+  justify-content: space-between;
+  gap: 18px;
+  align-items: center;
+}
+
+.resume-label {
+  display: inline-block;
+  margin-bottom: 8px;
+  color: var(--accent-2);
+  font-size: 0.86rem;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+}
+
+.resume-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.button-primary,
+.button-secondary {
+  padding: 12px 18px;
+  border-radius: 14px;
+  font-weight: 700;
+  transition: transform 0.2s ease, opacity 0.2s ease;
+  white-space: nowrap;
+}
+
+.button-primary {
+  background: linear-gradient(135deg, var(--accent), var(--accent-2));
+  color: #08101f;
+}
+
+.button-secondary {
+  border: 1px solid rgba(124, 156, 255, 0.32);
+  background: rgba(124, 156, 255, 0.1);
+  color: var(--text);
+}
+
+.button-primary:hover,
+.button-secondary:hover,
+.contact-links a:hover {
+  transform: translateY(-2px);
+  opacity: 0.95;
+}
+
+.skills-wrap {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 28px;
+}
+
+.skill-pill {
+  padding: 10px 14px;
+  border-radius: 999px;
+  background: rgba(124, 156, 255, 0.12);
+  border: 1px solid rgba(124, 156, 255, 0.18);
+  color: var(--text);
+  font-size: 0.92rem;
+}
+
+.section-title {
+  margin-bottom: 22px;
+}
+
+.section-title h2 {
+  font-size: clamp(1.6rem, 3vw, 2.4rem);
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.project-card {
+  position: relative;
+  overflow: hidden;
+  transition:
+    transform 0.3s ease,
+    border-color 0.3s ease,
+    box-shadow 0.3s ease,
+    background 0.3s ease;
+}
+
+.project-card::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    135deg,
+    rgba(124, 156, 255, 0.08),
+    rgba(87, 214, 196, 0.05)
+  );
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-8px);
+  border-color: rgba(124, 156, 255, 0.3);
+  box-shadow:
+    0 24px 60px rgba(0, 0, 0, 0.35),
+    0 0 30px rgba(124, 156, 255, 0.15);
+}
+
+.project-card:hover::before {
+  opacity: 1;
+}
+
+.project-card h3,
+.project-card p,
+.project-card .project-tag {
+  position: relative;
+  z-index: 1;
+}
+
+.project-card:hover h3 {
+  color: var(--accent);
+}
+
+.project-card h3 {
+  font-size: 1.18rem;
+}
+
+.project-tag {
+  display: inline-block;
+  margin-bottom: 12px;
+  color: var(--accent-2);
+  font-size: 0.86rem;
+}
+
+.experience-card {
+  margin-top: 18px;
+}
+
+.experience-card ul {
+  padding-left: 20px;
+  display: grid;
+  gap: 10px;
+}
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: minmax(280px, 320px) minmax(0, 1fr);
+  gap: 18px;
+  align-items: center;
+}
+
+.contact-photo-card {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.contact-photo {
+  width: 240px;
+  height: 240px;
+  min-height: 240px;
+  object-fit: cover;
+  border-radius: 50%;
+  display: block;
+  background: rgba(255, 255, 255, 0.04);
+  border: 6px solid rgba(124, 156, 255, 0.18);
+}
+
+.contact-card {
+  display: grid;
+  gap: 18px;
+}
+
+.contact-links {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 12px;
+  width: 100%;
+}
+
+.contact-links a {
+  min-height: 54px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 14px;
+  border-radius: 12px;
+  background: linear-gradient(135deg, var(--accent), var(--accent-2));
+  color: #08101f;
+  font-weight: 700;
+  text-align: center;
+  transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.small-note {
+  font-size: 0.92rem;
+  color: #91a3c3;
+}
+
+.contact-section {
+  padding-bottom: 10px;
+}
+
+@media (max-width: 900px) {
+  .hero-layout,
+  .contact-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .contact-photo {
+    min-height: 260px;
+    width: 220px;
+    height: 220px;
+  }
+}
+
+@media (max-width: 800px) {
+  .page {
+    width: min(100% - 20px, 1100px);
+    padding-top: 20px;
+  }
+
+  .hero-card,
+  .project-card,
+  .experience-card,
+  .contact-card,
+  .resume-card,
+  .contact-photo-card {
+    padding: 20px;
+    border-radius: 20px;
+  }
+
+  .hero-grid,
+  .projects-grid,
+  .resume-card {
+    grid-template-columns: 1fr;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .contact-links {
+    grid-template-columns: 1fr;
+  }
+
+  .hero h1 {
+    font-size: clamp(2rem, 10vw, 3.4rem);
+  }
+}
