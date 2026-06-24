@@ -3,14 +3,18 @@ import Head from 'next/head';
 const siteConfig = {
   name: 'Frenz Edmund Rodolf Evangelista Cubillan',
   role: 'Computer Engineering Graduate',
+
   intro:
     'I build software, embedded systems, and AI-powered tools. My focus is on creating practical projects that connect hardware and software, from web applications to local LLM systems and automation solutions.',
-  resumePdf: '/resume.pdf',
+
+  resumePdf: '/frenzportfolio/resume.pdf',
+
   resumeRepo: 'https://github.com/frenzcubillan-hash',
   github: 'https://github.com/frenzcubillan-hash',
   linkedin: 'https://www.linkedin.com/in/feryjfsgg/',
   email: 'frenzcubillan@gmail.com',
-  photo: "/frenzportfolio/public/profile.jpg",
+
+  photo: '/frenzportfolio/Profile.jpg'
 };
 
 const projects = [
