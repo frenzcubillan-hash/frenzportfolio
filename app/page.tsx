@@ -10,7 +10,7 @@ const siteConfig = {
   github: 'https://github.com/frenzcubillan-hash',
   linkedin: 'https://www.linkedin.com/in/feryjfsgg/',
   email: 'frenzcubillan@gmail.com',
-  photo: '/Profile.jpg',
+  photo: '/profile.jpg',
 };
 
 const projects = [
