@@ -21,8 +21,8 @@ const projects = [
   {
     title: 'Maze Game',
     tag: 'Procedural Generation / Seed-Based / Front-End',
-    description:
-      'A web-based maze game with procedurally generated mazes based on a seed value, built with HTML, CSS, and JavaScript.',
+    description: 'A web-based maze game with procedurally generated mazes based on a seed value, built with HTML, CSS, and JavaScript.',
+    link: 'https://maze-game-biab.vercel.app/'
   },
   {
     title: 'AI File Analyzer',
@@ -162,6 +162,7 @@ export default function Home() {
                 <p className="project-tag">{project.tag}</p>
                 <h3>{project.title}</h3>
                 <p>{project.description}</p>
+                <a href={project.link} target="_blank" rel="noreferrer"></a>
               </article>
             ))}
           </div>
