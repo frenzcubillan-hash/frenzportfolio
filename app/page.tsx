@@ -22,13 +22,14 @@ const projects = [
     title: 'Maze Game',
     tag: 'Procedural Generation / Seed-Based / Front-End',
     description: 'A web-based maze game with procedurally generated mazes based on a seed value, built with HTML, CSS, and JavaScript.',
-    link: 'https://maze-game-biab.vercel.app/'
+    link: 'https://maze-game-biab.vercel.app/',
   },
   {
     title: 'AI File Analyzer',
     tag: 'LLM / AI / Full-Stack',
     description:
       'A web application for uploading documents and analyzing them with a locally hosted LLM. Built file processing, structured prompting, and response rendering.',
+    link: 'https://github.com/frenzcubillan-hash/localfileanalyzer',
   },
   {
     title: 'Personalized Local LLM System',
@@ -41,7 +42,8 @@ const projects = [
     tag: 'Full-Stack / PHP / MySQL',
     description:
       'A school project built with HTML, CSS, JavaScript, PHP, and MySQL for student, instructor, and admin workflows.',
-  },
+    link: 'https://github.com/frenzcubillan-hash/hkportal',
+    },
   {
     title: 'Automated Piggery Cleaning System',
     tag: 'Embedded / IoT / ESP32-CAM',
