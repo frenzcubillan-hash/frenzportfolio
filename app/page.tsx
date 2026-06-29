@@ -159,10 +159,11 @@ export default function Home() {
           <div className="projects-grid">
             {projects.map((project) => (
               <article key={project.title} className="project-card">
+                <a href={project.link} target="_blank" rel="noreferrer">
                 <p className="project-tag">{project.tag}</p>
                 <h3>{project.title}</h3>
                 <p>{project.description}</p>
-                <a href={project.link} target="_blank" rel="noreferrer"></a>
+               </a>
               </article>
             ))}
           </div>
