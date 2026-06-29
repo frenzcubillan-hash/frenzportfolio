@@ -19,6 +19,12 @@ const siteConfig = {
 
 const projects = [
   {
+    title: 'Maze Game',
+    tag: 'Procedural Generation / Seed-Based / Front-End',
+    description:
+      'A web-based maze game with procedurally generated mazes based on a seed value, built with HTML, CSS, and JavaScript.',
+  },
+  {
     title: 'AI File Analyzer',
     tag: 'LLM / AI / Full-Stack',
     description:
@@ -81,7 +87,7 @@ export default function Home() {
       <Head>
         <title>{siteConfig.name} | Portfolio</title>
         <meta
-          name="description"
+          name="Description"
           content="Portfolio of a Computer Engineering graduate specializing in software, embedded systems, and AI."
         />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -128,7 +134,7 @@ export default function Home() {
                     View PDF Resume
                   </a>
                   <a className="button-secondary" href={siteConfig.resumeRepo} target="_blank" rel="noreferrer">
-                    Resume Repo
+                    GitHub Repository
                   </a>
                 </div>
               </div>
@@ -164,7 +170,7 @@ export default function Home() {
             <h3>Experience highlights</h3>
             <ul>
               <li>Built responsive interfaces and backend logic for student and admin systems.</li>
-              <li>Worked with MySQL, PHP, XAMPP, and relational database design.</li>
+              <li>Worked with MySQL, PHP, Apache, and relational database design.</li>
               <li>Explored local model deployment, prompt engineering, and AI workflows.</li>
               <li>Developed embedded and IoT-based projects using ESP32-CAM and automation logic.</li>
             </ul>
